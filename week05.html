@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task5</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>ASSIGNMENT - WEEK 05</h1>
+        <nav class="desktop">
+            <div class="toggleMenu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="disp">
+                <li><a href="week03.html">Week 03</a></li>
+                <li><a href="week04.html">Week 04</a></li>
+                <li class="active"><a href="week05.html">Week 05</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>CONDITIONALS</h1>
+        <section class="last week5">
+            <section>
+                <h2>Message 1</h2>
+                <div id="message1"></div>
+            </section>
+            <section>
+                <h2>Message 2</h2>
+                <div id="message2"></div>
+            </section>
+            <h2>Temples | Fetch</h2>
+            <section>
+
+                <section class="sort">
+                    <label for="">Sort By</label>
+                    <select id="sortBy">
+                        <option value="Name">Name</option>
+                        <option value="Location">Location</option>
+                        <option value="Dedicated">Dedicated year</option>
+                    </select>
+                </section>
+                <div id="temples">
+                    <p style="color: red; font-weight: bold;">Failed to retrieve data, check your internet connection and try reloading the page</p>
+                </div>
+            </section>
+        </section>
+    </div>
+
+</body>
+<script src="./scripts/week05.js"></script>
+<script>
+    let togo = document.querySelector('.toggleMenu')
+    let ul = document.querySelector('ul')
+
+    togo.onclick = () => {
+        ul.classList.toggle('disp')
+    }
+</script>
+
+</html>

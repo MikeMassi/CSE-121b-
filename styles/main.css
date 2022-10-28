@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+    gap: 50px;
+    place-items: center;
+    background: rgb(211, 227, 226);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.content h1 {
+    padding: 10px 0px;
+    color: rgb(29, 74, 50);
+    padding: 2px 5px;
+    border: 5px dashed rgb(29, 74, 50);
+    border-radius: 5px;
+}
+
+h2 {
+    padding: 10px 70px;
+    color: rgb(20, 77, 133);
+}
+
+h3 {
+    color: rgb(23, 23, 23);
+}
+
+h4 {
+    color: rgb(53, 53, 53);
+}
+
+header {
+    position: relative;
+    background: rgb(12, 25, 34);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+header h1 {
+    flex: 1;
+}
+
+.toggleMenu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggleMenu>div {
+    width: 50px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+}
+
+.toggleMenu>div:nth-child(2) {
+    margin: 7px 0px;
+}
+
+nav ul {
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+    padding: 0px 50px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    font-size: 1.3rem;
+    color: rgb(176, 199, 202);
+}
+
+nav .active>a {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(12, 25, 34);
+    background: rgb(176, 199, 202);
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+nav li:hover>a {
+    font-weight: bolder;
+    color: rgb(46, 128, 108);
+}
+
+.content {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(173, 204, 202);
+    gap: 30px;
+    padding: 20px 0px;
+}
+
+.content>section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    /* max-width: 500px; */
+    background: white;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+section form {
+    padding: 20px;
+    background: rgb(19, 39, 54);
+    background: rgb(20, 77, 133);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: auto;
+    max-width: 400px;
+    width: 90%;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+section form div {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+section form div input {
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+section form div p {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: white;
+}
+
+section form button {
+    padding: 10px 0px;
+    width: 100px;
+    border-radius: 5px;
+    background: rgb(14, 50, 75);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+section form button:active {
+    transform: scale(0.9)
+}
+
+section form label {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.last {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.last section {
+    display: flex;
+    width: 100%;
+}
+
+.last section li {
+    margin-left: 50px;
+    list-style: decimal;
+}
+
+.last section>div {
+    position: relative;
+    padding: 20px;
+    background: rgb(20, 77, 133);
+    color: white;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: auto;
+    word-wrap: break-word;
+    width: auto;
+    gap: 10px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.last section>div::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.last dl {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.last dl dt {
+    width: 50%;
+    padding: 5px 20px;
+    border: 2px solid rgb(71, 89, 102);
+}
+
+.last dl dd {
+    padding: 5px 20px;
+    border: 2px solid rgb(71, 89, 102);
+    width: 50%;
+}
+
+.last .sort {
+    /* position: absolute; */
+    float: right;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    /* background: red; */
+    /* display: none; */
+}
+
+#sortBy {
+    margin: 20px 0px;
+    width: 150px;
+    border: 1px solid rgb(20, 50, 80);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+article {
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    .toggleMenu {
+        display: block;
+    }
+    .disp {
+        display: none;
+    }
+    header nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        width: 100%;
+        background: rgb(12, 25, 34);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+    nav .active {
+        text-align: center;
+        width: 90%;
+        background: rgb(176, 199, 202);
+    }
+    section form {
+        width: 70%;
+    }
+    .last section {
+        flex-direction: column;
+    }
+    .last section>div {
+        word-wrap: break-word;
+        width: 90%;
+        /* width: auto; */
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>ASSIGNMENT - WEEK 04</h1>
+        <nav class="desktop">
+            <div class="toggleMenu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="disp">
+                <li><a href="week03.html">Week 03</a></li>
+                <li class="active"><a href="week04.html">Week 04</a></li>
+                <li><a href="week05.html">Week 05</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>DATA CHANGES</h1>
+        <section class="last">
+            <section>
+                <h2>Name</h2>
+                <div id="name"></div>
+            </section>
+            <section>
+                <h2>Photo</h2>
+                <img src="" id="photo" alt="">
+            </section>
+            <section>
+                <h2>Favorite Foods</h2>
+                <ul id="favorite-foods"></ul>
+            </section>
+            <section>
+                <h2>Hobbies</h2>
+                <ul id="hobbies"></ul>
+            </section>
+            <section>
+                <h2>Places Lived</h2>
+                <dl id="places-lived">
+                    <dt style="border-bottom: 1px solid black; background:  rgb(71, 89, 102); color: white;">PLACES</dt>
+                    <dd style="border-bottom: 1px solid black; background:  rgb(71, 89, 102); color: white;">DURATION</dd>
+                </dl>
+            </section>
+        </section>
+    </div>
+
+</body>
+<script src="./scripts/week04.js"></script>
+<script>
+    let togo = document.querySelector('.toggleMenu')
+    let ul = document.querySelector('ul')
+
+    togo.onclick = () => {
+        ul.classList.toggle('disp')
+    }
+</script>
+
+</html>
